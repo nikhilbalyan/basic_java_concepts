@@ -1,0 +1,8 @@
+package november_28th_2017;
+
+public class StaticVariableMethodCalling {
+	static int a = 23;
+	public static void main(String[] args) {
+		System.out.println(a);
+	}
+}

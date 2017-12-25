@@ -1,0 +1,35 @@
+package november_30th_2017;
+
+class ImplementRunnable implements Runnable {
+	int number;
+
+	ImplementRunnable(int no) {
+		number = no;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(1000);
+			checkNumberPallindrome(number);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void checkNumberPallindrome(int number) {
+		int temp = number;
+		int reverse = 1;
+		while (number != 0) {
+			
+		}
+	}
+
+}
+
+public class ImplementRunnableInterface {
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,7 @@
+package employee_details;
+
+public class Company {
+	enum dept {
+		tecnology, admin, accounts, maintenance
+	};
+}

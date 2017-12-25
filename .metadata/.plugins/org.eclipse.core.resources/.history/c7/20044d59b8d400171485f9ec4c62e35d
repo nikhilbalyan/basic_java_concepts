@@ -1,0 +1,7 @@
+package november_29th_2017;
+
+public class LeftShiftOperator {
+	public static void main(String[] args) {
+		
+	}
+}

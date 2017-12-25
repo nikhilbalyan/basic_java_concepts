@@ -1,0 +1,13 @@
+package third_day_15th_november_2017;
+
+public class CountDuplicates {
+	public static void main(String[] args) {
+		int[] arr = {1, 1, 2, 2, 2, 3};
+		countDuplicates(arr);
+	}
+	
+	 static int countDuplicates(int[] numbers) {
+		 
+		 return 1;
+	    }
+}

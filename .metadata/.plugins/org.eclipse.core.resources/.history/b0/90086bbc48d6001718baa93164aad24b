@@ -1,0 +1,21 @@
+package november_30th_2017;
+
+import java.util.Scanner;
+
+class AgeLessThan18 extends Exception {
+	AgeLessThan18(String message) {
+		super(message);
+	}
+}
+
+public class CustomExceptions {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int age = sc.nextInt();
+		if (age < 18) {
+			throw new AgeLessThan18("age less than 18");
+		}
+		sc.close();
+	}
+}

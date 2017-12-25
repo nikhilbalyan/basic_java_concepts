@@ -1,0 +1,17 @@
+package third_day_15th_november_2017;
+
+public class Pangrams {
+	
+	 static String isPangram(String[] strings) {
+
+	    }
+	
+	public static void main(String[] args) {
+		int[] max = new int[25];
+		String[] pang = new String[3];
+		pang[0] = "";
+		pang[1] = "";
+		pang[2] = "";
+		isPangram(pang);
+	}
+}

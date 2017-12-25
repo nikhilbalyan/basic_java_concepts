@@ -1,0 +1,9 @@
+package employee_details;
+
+public class EmployeeAbstract {
+	enum dept {
+		tecnology,
+		admin,
+		
+	}
+}

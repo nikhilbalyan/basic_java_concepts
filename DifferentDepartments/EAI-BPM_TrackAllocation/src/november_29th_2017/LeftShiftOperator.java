@@ -1,0 +1,10 @@
+package november_29th_2017;
+
+public class LeftShiftOperator {
+	public static void main(String[] args) {
+		int a = 10;
+		System.out.println("before left shift "+ a);
+		System.out.print("after left shift ");
+		System.out.println(a<<2);
+	}
+}

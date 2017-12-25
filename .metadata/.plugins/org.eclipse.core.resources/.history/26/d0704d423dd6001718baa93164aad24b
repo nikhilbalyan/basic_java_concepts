@@ -1,0 +1,16 @@
+package november_30th_2017;
+
+public class Extending_Thread_Class extends Thread {
+	public Extending_Thread_Class(String name) {
+		super(name)
+	}
+
+	@Override
+	public void run() {
+		System.out.println("My Thread - start"+ Thread.currentThread().getName());
+		super.run();
+	}
+	
+	
+	
+}

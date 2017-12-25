@@ -1,0 +1,11 @@
+package november_30th_2017;
+
+class AgeLessThan18 extends Exception {
+	AgeLessThan18(int age) {
+		super("lol");
+	}
+}
+
+public class CustomExceptions {
+
+}

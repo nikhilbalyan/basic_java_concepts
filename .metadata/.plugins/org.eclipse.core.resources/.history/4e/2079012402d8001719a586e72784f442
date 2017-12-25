@@ -1,0 +1,5 @@
+package jdbc_connectivity;
+
+public class JDBCMySQLConnection {
+
+}

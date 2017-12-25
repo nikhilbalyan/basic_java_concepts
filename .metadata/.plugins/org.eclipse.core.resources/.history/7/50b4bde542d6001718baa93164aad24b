@@ -1,0 +1,12 @@
+package november_30th_2017;
+
+
+public class ImplementRunnable implements Runnable {
+	
+}
+
+public class ImplementRunnableInterface {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,14 @@
+package november_28th_2017;
+
+public class StaticFeaturesOOP {
+	static int a;
+	static int b;
+	public StaticFeaturesOOP() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+}

@@ -1,0 +1,7 @@
+package november_30th_2017;
+
+public class Extending_Thread_Class extends Thread {
+	public Extending_Thread_Class(String name) {
+		super(name)
+	}
+}

@@ -1,0 +1,20 @@
+package third_day_15th_november_2017;
+
+public class CountDuplicates {
+	public static void main(String[] args) {
+		int[] arr = {1, 1, 2, 2, 2, 3};
+		countDuplicates(arr);
+	}
+	
+	 static int countDuplicates(int[] numbers) {
+		 int count = 0;
+		 for(int i = 0; i < numbers.length; i++) {
+			 for(int j = 0; j < numbers.length; j++) {
+				 if(numbers[i] == numbers[j]) {
+					 count++;
+				 }
+			 }
+		 }
+		 return count;
+	    }
+}

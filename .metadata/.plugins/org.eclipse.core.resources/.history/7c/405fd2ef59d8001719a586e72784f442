@@ -1,0 +1,64 @@
+package jdbc_connectivity;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+public class EmployeeDAO {
+	public void addEmployee(String name, String phone, String address, String department) throws SQLException {
+		try {
+			Connection con = JDBCMySQLConnection.getConnection();
+			String query = " INSERT INTO employeedata(name, phone, address, department)"+ 
+					" values (?, ?, ?, ?)";
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, name);
+			ps.setString(2, phone);
+			ps.setString(3, address);
+			ps.setString(4, department);
+			ps.execute();
+			
+			/*int teamId; 
+			String queryTeamId = " Select Team_Id from Team WHERE Team_Name= "+ teamName;
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(queryTeamId);
+			while(rs.next()) {
+				teamId = rs.getInt("team_ID");
+				System.out.println("here is the retrieved team id = "+teamId);
+			}*/
+			
+			/*Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM TEAM");
+			
+			while (rs.next()) {
+				System.out
+						.println(rs.getInt(1) + " " + rs.getString(2));
+
+			}
+			con.close();
+*/			// System.out.println(demo);
+			con.close();
+		} catch (NumberFormatException e) {
+//			e.printStackTrace();
+			System.out.println("catch exception "+e.getMessage());
+		}
+	}
+	
+	public void searchItem(String itemName, String itemValue) {
+		String queryTeamId = " Select * from employeedata WHERE" +itemName+"=" +itemValue+";";
+		Connection con = JDBCMySQLConnection.getConnection();
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery(queryTeamId);
+		int id;
+		String name, department, address, phone;
+		while(rs.next()) {
+			id = rs.getInt("ID");
+			name = rs.getString("name");
+			department = rs.getString("department");
+			address = rs.getString("address");
+			phone = rs.getString("phone");
+	}
+
+}

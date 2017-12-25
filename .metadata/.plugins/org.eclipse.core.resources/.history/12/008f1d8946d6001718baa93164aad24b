@@ -1,0 +1,62 @@
+package november_30th_2017;
+
+import java.util.Scanner;
+
+class Extending_Thread extends Thread {
+	String testName;
+
+	public Extending_Thread(String name) {
+		super(name);
+		testName = name;
+	}
+
+	@Override
+	public void run() {
+		System.out.println("My Thread - start"
+				+ Thread.currentThread().getName());
+		try {
+			Thread.sleep(1000);
+			checkStringPallindrome(testName);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		// System.out.println("MyThread -END" +
+		// Thread.currentThread().getName());
+	}
+
+	private void checkStringPallindrome(String string) {
+		boolean flag = false;
+		for (int i = 0; i < string.length() / 2; i++) {
+			char ch1 = string.charAt(i);
+			char ch2 = string.charAt(string.length() - i - 1);
+			if (ch1 != ch2) {
+				flag = true;
+				break;
+			}
+		}
+		if (!flag) {
+			System.out.println("it is a pallindrome");
+		} else {
+			System.out.println("it is not a pallindrome");
+		}
+
+	}
+
+}
+
+public class Extending_Thread_Class {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String st = sc.next();
+		Extending_Thread et1 = new Extending_Thread(st);
+		for (int i = 0; i < 10; i++) {
+			Thread t1 = new Thread(et1);
+			Thread t2 = new Thread(et1);
+			t1.start();
+			t1.start();
+			t1.start();
+			t2.start();
+		}
+		sc.close();
+	}
+}

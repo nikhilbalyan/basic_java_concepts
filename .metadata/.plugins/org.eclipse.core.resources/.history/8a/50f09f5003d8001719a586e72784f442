@@ -1,0 +1,46 @@
+package main;
+
+import java.util.Scanner;
+
+public class EmployeeDatabaseClient {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t;
+		while (true) {
+			System.out.println("enter -1 to break");
+			System.out.println("enter 1 to add employee to database");
+			System.out.println("enter 2 to search on the basis of :- phone"
+					+ "\n enter 3 to search on the name"
+					+ "\n enter 4 to search on the phone"
+					+ "\n enter 5 to search on the address"
+					+ "\n enter 6 to search on the department");
+			t = sc.nextInt();
+			if (t == -1) {
+				break;
+			}
+			switch (t) {
+			case 1:
+				String name = sc.next();
+				String phone = sc.next();
+				String address = sc.next();
+				String department = sc.next();
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+			case 7:
+				break;
+			default:
+				break;
+			}
+		}
+		sc.close();
+	}
+}
